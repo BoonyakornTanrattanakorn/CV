@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Portfolio — Boonyakorn Tanrattanakorn</title>
+    <style>
+      :root{--bg:#f7f7f8;--card:#fff;--muted:#6b6b6b;--accent:#1a1a1a}
+      html,body{height:100%;margin:0;font-family:Inter,ui-sans-serif,system-ui,Segoe UI,Roboto,"Helvetica Neue",Arial}
+      body{background:var(--bg);color:#111}
+      .wrap{max-width:1000px;margin:32px auto;padding:24px}
+      header{display:flex;align-items:center;gap:16px}
+      .avatar{width:64px;height:64px;border-radius:8px;object-fit:cover}
+      h1{font-size:1.25rem;margin:0}
+      p.lead{margin:6px 0 0;color:var(--muted)}
+      .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px;margin-top:22px}
+      .card{background:var(--card);border-radius:10px;padding:16px;box-shadow:0 6px 18px rgba(18,18,18,0.06)}
+      .card h3{margin:0 0 8px;font-size:1rem}
+      .meta{font-size:0.85rem;color:var(--muted);margin-bottom:8px}
+      .btn{display:inline-block;padding:8px 12px;border-radius:8px;background:var(--accent);color:#fff;text-decoration:none;font-size:0.9rem}
+      footer{margin-top:28px;color:var(--muted);font-size:0.9rem}
+      .tags{margin-top:8px}
+      .tag{display:inline-block;background:#f0f0f0;color:#333;padding:4px 8px;border-radius:999px;font-size:0.78rem;margin-right:6px}
+      @media (max-width:520px){.wrap{padding:12px}header{gap:12px}.avatar{width:56px;height:56px}}
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <header>
+        <img class="avatar" src="https://avatars.githubusercontent.com/u/156056911?v=4" alt="Boonyakorn" />
+        <div>
+          <h1>Boonyakorn Tanrattanakorn</h1>
+          <p class="lead">Embedded Systems & FPGA · Student, Chulalongkorn University</p>
+        </div>
+      </header>
+
+      <section style="margin-top:18px">
+        <p>Selected projects and highlights. Click "View" to open a project's page or the CV in the sidebar.</p>
+      </section>
+
+      <section class="grid">
+        <article class="card">
+          <h3>Project CURSR-IV — Avionics</h3>
+          <div class="meta">2024 — Chulalongkorn University High Altitude Research Club</div>
+          <p>Designed a 4-layer SMT flight computer PCB, developed STM32 firmware for sensors, telemetry, and flight control.</p>
+          <div class="tags"><span class="tag">STM32</span><span class="tag">KiCad</span><span class="tag">LoRa</span></div>
+        </article>
+
+        <article class="card">
+          <h3>FPGA Real-Time Video Player</h3>
+          <div class="meta">2025 — Academic project</div>
+          <p>Implemented a Basys-3-based player in Verilog with an SPI SD controller streaming 320×240 frames to dual-port RAM.</p>
+          <div class="tags"><span class="tag">Verilog</span><span class="tag">VGA</span><span class="tag">FPGA</span></div>
+        </article>
+
+        <article class="card">
+          <h3>Weather Station · Embedded System Lab</h3>
+          <div class="meta">2025 — Chulalongkorn University</div>
+          <p>STM32 + ESP32-S3 system publishing sensor data to MQTT, backend (Go + Fiber), and SvelteKit dashboard with real-time visuals.</p>
+          <div class="tags"><span class="tag">ESP32</span><span class="tag">MQTT</span><span class="tag">SvelteKit</span></div>
+        </article>
+
+        <article class="card">
+          <h3>Smoothed Particle Hydrodynamics Simulator</h3>
+          <div class="meta">2025 — Personal project</div>
+          <p>Real-time 2D fluid simulator in Godot using SPH; GPU-accelerated density & pressure via GLSL compute shaders.</p>
+          <div class="tags"><span class="tag">Godot</span><span class="tag">GLSL</span><span class="tag">Simulation</span></div>
+        </article>
+      </section>
+
+      <footer>
+        <p>Want to see the CV? Open the site root and use the sidebar to view or download the PDF/HTML CV. Source: <a href="https://github.com/BoonyakornTanrattanakorn/portfolio" target="_blank" rel="noopener">portfolio repo</a>.</p>
+        <p style="margin-top:8px">Contact: <a href="mailto:boonyakorn.tan@gmail.com">boonyakorn.tan@gmail.com</a></p>
+      </footer>
+    </div>
+  </body>
+</html>

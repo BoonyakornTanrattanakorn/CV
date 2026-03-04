@@ -6,6 +6,7 @@ on:
       - main
     paths:
       - 'CV/**'
+      - 'index.html'
   workflow_dispatch:
 
 permissions:
@@ -30,7 +31,8 @@ jobs:
       - name: Prepare output directory
         run: |
           mkdir -p _site
-          find CV -name "*.html" -exec cp {} _site/index.html \;
+          cp index.html _site/index.html
+          find CV -name "*.html" -exec cp {} _site/cv.html \;
           find CV -name "*.pdf" -exec cp {} _site/Boonyakorn_Tanrattanakorn_CV.pdf \;
 
       - name: Setup Pages

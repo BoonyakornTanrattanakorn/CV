@@ -36,7 +36,7 @@ jobs:
         run: pip install "rendercv[full]"
 
       - name: Render CV
-        run: rendercv render "Boonyakorn_Tanrattanakorn_CV.yaml"
+        run: rendercv render "Boonyakorn_Tanrattanakorn_CV.yaml" 2>&1
 
       - name: List render output
         run: find rendercv_output -type f || echo "rendercv_output directory not found"

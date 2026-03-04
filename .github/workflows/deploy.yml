@@ -38,12 +38,15 @@ jobs:
       - name: Render CV
         run: rendercv render "Boonyakorn_Tanrattanakorn_CV.yaml"
 
+      - name: List render output
+        run: find rendercv_output -type f || echo "rendercv_output directory not found"
+
       - name: Prepare output directory
         run: |
           mkdir -p _site
-          cp rendercv_output/*.html _site/index.html
-          cp rendercv_output/*.pdf _site/Boonyakorn_Tanrattanakorn_CV.pdf || true
-          cp rendercv_output/*.png _site/ 2>/dev/null || true
+          find rendercv_output -name "*.html" -exec cp {} _site/index.html \;
+          find rendercv_output -name "*.pdf" -exec cp {} _site/Boonyakorn_Tanrattanakorn_CV.pdf \; || true
+          find rendercv_output -name "*.png" -exec cp {} _site/ \; || true
 
       - name: Setup Pages
         uses: actions/configure-pages@v5

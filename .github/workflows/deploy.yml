@@ -9,6 +9,7 @@ on:
       - 'portfolio/**'
       - 'index.html'
       - 'sidebar.html'
+      - '.github/workflows/deploy.yml'
   workflow_dispatch:
 
 permissions:

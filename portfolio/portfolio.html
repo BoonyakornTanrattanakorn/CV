@@ -42,27 +42,60 @@
       const grid = document.getElementById('project-grid');
 
       function renderCard(id, meta) {
-        const card = document.createElement('article');
+        const card = document.createElement('a');
         card.className = 'card';
+        card.href = `projects/${id}/index.html`;
+        card.setAttribute('aria-label', meta.title || id);
 
-        const thumbHTML = meta.thumbnail
-          ? `<img class="card-thumb" src="projects/${id}/${meta.thumbnail}" alt="${meta.title} thumbnail" loading="lazy">`
-          : `<div class="card-thumb-placeholder">No image</div>`;
+        // Thumbnail: create an <img> and add an onerror fallback to show placeholder
+        if (meta.thumbnail) {
+          const img = document.createElement('img');
+          img.className = 'card-thumb';
+          img.src = `projects/${id}/${String(meta.thumbnail).trim()}`;
+          img.alt = `${meta.title || id} thumbnail`;
+          img.loading = 'lazy';
+          img.onerror = () => {
+            const ph = document.createElement('div');
+            ph.className = 'card-thumb-placeholder';
+            ph.textContent = 'No image';
+            if (img.parentNode) img.parentNode.replaceChild(ph, img);
+          };
+          card.appendChild(img);
+        } else {
+          const ph = document.createElement('div');
+          ph.className = 'card-thumb-placeholder';
+          ph.textContent = 'No image';
+          card.appendChild(ph);
+        }
 
-        const tagsHTML = (meta.tags || [])
-          .map(t => `<span class="tag">${t}</span>`)
-          .join('');
+        // Card body
+        const body = document.createElement('div');
+        body.className = 'card-body';
 
-        card.innerHTML = `
-          ${thumbHTML}
-          <div class="card-body">
-            <h3>${meta.title}</h3>
-            <div class="card-meta">${meta.date} &nbsp;·&nbsp; ${meta.organization} &nbsp;·&nbsp; ${meta.role}</div>
-            <p>${meta.summary}</p>
-            <div class="tags">${tagsHTML}</div>
-            <a class="card-link" href="projects/${id}/index.html">View →</a>
-          </div>`;
+        const h3 = document.createElement('h3');
+        h3.textContent = meta.title || id;
+        body.appendChild(h3);
 
+        const metaDiv = document.createElement('div');
+        metaDiv.className = 'card-meta';
+        metaDiv.innerHTML = `${meta.date || ''} &nbsp;·&nbsp; ${meta.organization || ''} &nbsp;·&nbsp; ${meta.role || ''}`;
+        body.appendChild(metaDiv);
+
+        const p = document.createElement('p');
+        p.textContent = meta.summary || '';
+        body.appendChild(p);
+
+        const tagsDiv = document.createElement('div');
+        tagsDiv.className = 'tags';
+        (meta.tags || []).forEach(t => {
+          const span = document.createElement('span');
+          span.className = 'tag';
+          span.textContent = t;
+          tagsDiv.appendChild(span);
+        });
+        body.appendChild(tagsDiv);
+
+        card.appendChild(body);
         return card;
       }
 

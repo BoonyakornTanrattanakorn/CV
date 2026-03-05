@@ -12,42 +12,38 @@
 
       <h1>Weather Station — Embedded System Lab</h1>
       <div class="meta">
-        2025 &nbsp;·&nbsp; Chulalongkorn University &nbsp;·&nbsp; Role: Full-Stack Embedded Developer
+        2025 &nbsp;·&nbsp; Chulalongkorn University &nbsp;·&nbsp; Role: Embedded Firmware Programmer
       </div>
       <div class="tags">
         <span class="tag">STM32</span>
         <span class="tag">ESP32</span>
         <span class="tag">MQTT</span>
-        <span class="tag">Go</span>
-        <span class="tag">SvelteKit</span>
       </div>
 
-      <!-- Replace with <img class="thumbnail" src="thumbnail.jpg" alt="Dashboard screenshot"> when available -->
-      <div class="thumbnail-placeholder">No thumbnail yet</div>
+      <!-- Replace with <figure class="inbody-figure"><img class="inbody-img" src="thumbnail.jpg" alt="Dashboard screenshot"><figcaption>Caption</figcaption></figure> when available -->
+      <figure class="inbody-figure">
+        <img class="inbody-img thumbnail" src="setup.jpg" alt="Setup photo: STM32 and ESP32 boards connected with sensors and wires" loading="lazy">
+        <figcaption>Setup photo: STM32 and ESP32 boards connected with sensors and wires</figcaption>
+      </figure>
 
       <!-- ── Project body — customize freely below ── -->
       <div class="body">
         <h2>Overview</h2>
         <p>
-          An end-to-end embedded IoT system collecting environmental data (temperature, humidity, pressure, UV index)
-          and visualizing it on a live web dashboard. Built as a lab assignment but extended with a custom backend
-          and a polished frontend.
+          An end-to-end embedded IoT system collecting environmental data (temperature, humidity, pressure, light intensity index)
+          and visualizing it on a live web dashboard.
         </p>
 
         <h2>System Architecture</h2>
         <div class="arch-row">
-          <div class="arch-box"><strong>STM32</strong>Sensor acquisition over I²C/SPI, forwards data to ESP32 via UART</div>
+          <figure class="inbody-figure">
+            <img class="inbody-img" src="rain-gauge.jpg" alt="Rain gauge photo" loading="lazy">
+            <figcaption>Rain gauge photo</figcaption>
+          </figure>
+          
+          <div class="arch-box"><strong>STM32</strong>Sensor acquisition over analog inputs and digital pins, forwards data to ESP32 via UART</div>
           <div class="arch-box"><strong>ESP32-S3</strong>Wi-Fi bridge; publishes JSON payloads to MQTT broker (EMQX)</div>
-          <div class="arch-box"><strong>Go + Fiber</strong>Subscribes to MQTT, stores readings in SQLite, serves REST &amp; WebSocket</div>
-          <div class="arch-box"><strong>SvelteKit</strong>Real-time charts (Chart.js), historical graphs, responsive layout</div>
         </div>
-
-        <h2>Highlights</h2>
-        <ul>
-          <li>Sub-second end-to-end latency from sensor read to dashboard update via WebSocket push</li>
-          <li>Dockerised backend for reproducible deployment</li>
-          <li>Configurable alert thresholds with visual indicators on the dashboard</li>
-        </ul>
       </div>
     </div>
   </body>

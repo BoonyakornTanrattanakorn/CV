@@ -4,6 +4,6 @@
   "date": "2025",
   "organization": "Academic Project",
   "tags": ["Verilog", "VGA", "FPGA", "SPI"],
-  "thumbnail": "",
+  "thumbnail": "bad-apple.png",
   "summary": "Implemented a Basys-3-based player in Verilog with an SPI SD controller streaming 320×240 frames to dual-port RAM and VGA output."
 }

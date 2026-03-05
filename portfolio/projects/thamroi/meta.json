@@ -3,7 +3,7 @@
   "role": "Full-Stack Developer",
   "date": "2025",
   "organization": "Academic Project",
-  "tags": ["TypeScript", "Next.js", "Node.js", "PostgreSQL", "Prisma", "JWT", "SCSS", "Full-Stack"],
+  "tags": ["TypeScript", "Next.js", "Tailwind CSS", "Node.js", "PostgreSQL", "Prisma", "JWT", "SCSS", "Full-Stack"],
   "thumbnail": "",
-  "summary": "Full-stack social app: group search, profiles, and admin moderation (TypeScript, Next.js, Node.js, PostgreSQL, Prisma)."
+  "summary": "Full-stack matchmaking web app: group search, profiles, and admin moderation (TypeScript, Next.js, Node.js, PostgreSQL, Prisma)."
 }

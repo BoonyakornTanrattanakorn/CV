@@ -35,7 +35,11 @@ jobs:
           mkdir -p _site/CV _site/portfolio
           cp index.html _site/index.html
           cp sidebar.html _site/sidebar.html
-          cp portfolio/portfolio.html _site/portfolio/portfolio.html || true
+          # Copy all portfolio files
+          cp -r portfolio/portfolio.html _site/portfolio/
+          cp -r portfolio/projects.json _site/portfolio/
+          mkdir -p _site/portfolio/projects
+          cp -r portfolio/projects/* _site/portfolio/projects/
           find CV -name "*.html" -exec cp {} _site/CV/Boonyakorn_Tanrattanakorn_CV.html \;
           find CV -name "*.pdf" -exec cp {} _site/CV/Boonyakorn_Tanrattanakorn_CV.pdf \; || true
 

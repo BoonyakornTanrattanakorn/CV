@@ -10,25 +10,20 @@
     <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.4.0/model-viewer.min.js"></script>
     <title>Project CURSR-IV — Avionics</title>
     <link rel="stylesheet" href="../../styles.css">
-  </head>
-  <body>
-    <div class="wrap">
-      <a class="back" href="../../portfolio.html">← Back to Portfolio</a>
+  <script src="../../meta-loader.js" defer></script>
+</head>
+<body>
+  <div class="wrap">
+    <!-- Header -->
+    <a class="back" href="../../portfolio.html">← Back to Portfolio</a>
+    <h1 id="project-title">Loading…</h1>
+    <div id="project-meta" class="meta">&nbsp;</div>
+    <div id="project-tags" class="tags"></div>
 
-      <h1>Project CURSR-IV — Avionics</h1>
-      <div class="meta">
-        2024 &nbsp;·&nbsp; Chulalongkorn University High Altitude Research Club &nbsp;·&nbsp; Role: PCB Designer &amp; Firmware Developer
-      </div>
-      <div class="tags">
-        <span class="tag">STM32</span>
-        <span class="tag">KiCad</span>
-        <span class="tag">LoRa</span>
-        <span class="tag">PCB</span>
-      </div>
-
-      <!-- Replace with <img class="thumbnail" src="thumbnail.jpg" alt="CURSR-IV Board"> when a photo is available -->
-      <div class="thumbnail-placeholder">No thumbnail yet</div>
-
+    <figure class="inbody-figure">
+      <img id="project-thumb" class="inbody-img thumbnail" src="" alt="Project thumbnail" loading="lazy">
+      <figcaption id="project-thumb-caption"></figcaption>
+    </figure>
       <!-- ── Project body — customize freely below ── -->
       <div class="body">
         <model-viewer

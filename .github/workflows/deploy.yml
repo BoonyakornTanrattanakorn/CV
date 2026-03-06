@@ -41,6 +41,7 @@ jobs:
           cp -r portfolio/projects.json _site/portfolio/
           # Copy portfolio stylesheet so project pages resolve ../../styles.css correctly
           cp -r portfolio/styles.css _site/portfolio/styles.css
+          cp -r portfolio/meta-loader.js _site/portfolio/meta-loader.js
           mkdir -p _site/portfolio/projects
           cp -r portfolio/projects/* _site/portfolio/projects/
           find CV -name "*.html" -exec cp {} _site/CV/Boonyakorn_Tanrattanakorn_CV.html \;

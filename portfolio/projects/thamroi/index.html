@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -7,6 +8,7 @@
   <link rel="stylesheet" href="../../styles.css">
   <script src="../../meta-loader.js" defer></script>
 </head>
+
 <body>
   <div class="wrap">
     <!-- Header -->
@@ -22,27 +24,39 @@
 
     <div class="body">
       <h2>Overview</h2>
-      <p>ThamRoi is a full-stack matchmaking web application featuring group search, user profiles, and an admin moderation dashboard. I contributed both frontend and backend features across authentication, search, profile integration, admin reports, and deployment fixes.</p>
-
+      <p>ThamRoi is a full-stack matchmaking web application featuring group search, user profiles, and an admin
+        moderation dashboard.
+        I contributed both frontend and backend features across authentication, search, profile integration, admin
+        reports, and deployment fixes.
+        This was the term project for Chulalongkorn University's Software Engineering course.
+      </p>
       <h2>Key Contributions</h2>
       <ul>
         <li>User consent UI during registration with enforced scroll-to-read behavior.</li>
         <li>Group Search page UI and backend integration for live results and filtering.</li>
         <li>Profile view wiring to backend APIs.</li>
         <li>Admin reports system: JWT admin auth, report tagging, resolve/unresolve flows, and UI dialogs.</li>
-        <li>Backend: Prisma schema work, seed scripts, REST endpoints with query filters, and type-safe controllers.</li>
+        <li>Backend: Prisma schema work, seed scripts, REST endpoints with query filters, and type-safe controllers.
+        </li>
         <li>Deployment fixes: env-based backend URL configuration.</li>
       </ul>
-
+      <figure class="inbody-figure">
+        <img class="inbody-img" src="admin-dashboard.gif" alt="Admin dashboard demo" loading="lazy">
+        <figcaption>Admin dashboard demo where the data is pulled from the backend.</figcaption>
+      </figure>
+      <figure class="inbody-figure">
+        <img class="inbody-img" src="postmanapi.png" alt="Postman API demo" loading="lazy">
+        <figcaption>Postman API demo showing the backend endpoints for searching blogs.</figcaption>
+      </figure>
       <h2>Highlights</h2>
       <ul>
         <li>End-to-end features (UI + API) for search, profiles, and moderation.</li>
         <li>Improved UX and legal compliance with ToS scroll requirement.</li>
         <li>Data normalization and robust admin tooling for moderation workflows.</li>
       </ul>
-
-      <p>Repository: <a href="https://github.com/yourusername/thamroi">github.com/yourusername/thamroi</a></p>
+      <p>Sadly, the live website is no longer available due to lack of money :(</p>
     </div>
   </div>
 </body>
+
 </html>

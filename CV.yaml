@@ -14,7 +14,8 @@ cv:
         location: Bangkok, Thailand
         highlights:
           - 'GPA: 3.91/4.00'
-          - '**Relevant Coursework**: Introduction to Robotics (A), Hardware Synthesis Lab (A), Embedded System Laboratory (A), Data Structures (A), Algorithm Design (A), Software Engineering (A)'
+          - '**Relevant Coursework**: Computer Programming (A), Introduction to Data Structures (A), Operating Systems and Programs (A), Database Systems (A), Algorithm Design (A), Hardware Synthesis Laboratory (A),
+            Embedded System Laboratory (A), Software Engineering (A), Introduction to Robotics (A), Computer Networks I (A)'
     projects:
       - name: Project CURSR-III
         date: '2023'
